@@ -6,8 +6,8 @@
 * 微信公众号  高效程序员
 ****************************************/
 
-import QtQuick 2.11
-import QtQuick.Layouts 1.11
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
 
 Rectangle {
     id: compontentPage

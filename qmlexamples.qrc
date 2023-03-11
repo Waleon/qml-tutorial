@@ -9,5 +9,6 @@
         <file>qml/MouseEventsPage.qml</file>
         <file>qml/LayoutPage.qml</file>
         <file>qml/ZOrderPage.qml</file>
+        <file>qml/InlineCompontentPage.qml</file>
     </qresource>
 </RCC>

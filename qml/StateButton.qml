@@ -6,7 +6,7 @@
 * 微信公众号  高效程序员
 ****************************************/
 
-import QtQuick 2.11
+import QtQuick 2.15
 
 Item {
     id: root

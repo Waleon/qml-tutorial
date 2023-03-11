@@ -35,6 +35,7 @@ ApplicationWindow  {
                 ListElement { title: "Timer"; source: "qrc:/qml/qml/TimerPage.qml" }
                 ListElement { title: "Z-Order"; source: "qrc:/qml/qml/ZOrderPage.qml" }
                 ListElement { title: "Compontent"; source: "qrc:/qml/qml/CompontentPage.qml" }
+                ListElement { title: "Inline Compontent"; source: "qrc:/qml/qml/InlineCompontentPage.qml" }
             }
 
             delegate: ItemDelegate {
