@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/qml">
+        <file>qml/main.qml</file>
+        <file>qml/ColorPage.qml</file>
+        <file>qml/TimerPage.qml</file>
+        <file>qml/CompontentPage.qml</file>
+        <file>qml/StateButton.qml</file>
+        <file>qml/KeyEventsPage.qml</file>
+        <file>qml/MouseEventsPage.qml</file>
+        <file>qml/LayoutPage.qml</file>
+        <file>qml/ZOrderPage.qml</file>
+    </qresource>
+</RCC>
