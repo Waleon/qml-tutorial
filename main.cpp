@@ -3,9 +3,8 @@
 
 int main(int argc, char *argv[])
 {
-    QGuiApplication::setApplicationName("QMLExamples");
     QGuiApplication::setOrganizationName("Waleon");
-    QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+    QGuiApplication::setApplicationName("QMLExamples");
 
     QGuiApplication app(argc, argv);
 
