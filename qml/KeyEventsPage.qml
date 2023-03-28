@@ -6,9 +6,8 @@
 * 微信公众号  高效程序员
 ****************************************/
 
-import QtQuick 2.11
-import QtQuick.Controls 2.4
-import QtQuick.Layouts 1.11
+import QtQuick
+import QtQuick.Layouts
 
 Rectangle {
     id: keyEventsPage
@@ -26,7 +25,7 @@ Rectangle {
         Rectangle {
             width: 100
             height: 100
-            color: focus ? "green" : "black"
+            color: activeFocus ? "green" : "black"
 
             // 按下 Tab 键，或者点击鼠标获取焦点
             activeFocusOnTab: true
@@ -36,7 +35,7 @@ Rectangle {
             }
 
             // 可处理大部分按键事件
-            Keys.onPressed: {
+            Keys.onPressed: (event)=> {
                 console.info("key %1(%2) was pressed".arg(event.text).arg(event.key))
 
                 switch(event.key) {
@@ -62,7 +61,7 @@ Rectangle {
         Rectangle {
             width: 100
             height: 100
-            color: focus ? "green" : "black"
+            color: activeFocus ? "green" : "black"
 
             activeFocusOnTab: true
             MouseArea {
@@ -89,7 +88,7 @@ Rectangle {
         Rectangle {
             width: 100
             height: 100
-            color: focus ? "green" : "black"
+            color: activeFocus ? "green" : "black"
 
             activeFocusOnTab: true
             MouseArea {
@@ -98,7 +97,7 @@ Rectangle {
             }
 
             // Ctrl + Shift + 方向键
-            Keys.onPressed: {
+            Keys.onPressed: (event)=> {
                 if ((event.modifiers & Qt.ControlModifier) && (event.modifiers & Qt.ShiftModifier)) {
                     switch(event.key) {
                     case Qt.Key_Left:
@@ -125,7 +124,7 @@ Rectangle {
             id: rect
             width: 150
             height: 150
-            color: focus ? "green" : "black"
+            color: activeFocus ? "green" : "black"
 
             // 按下 Tab 键，或者点击鼠标获取焦点
             activeFocusOnTab: true
@@ -152,7 +151,7 @@ Rectangle {
                     height: 50
                     color: "orange"
 
-                    Keys.onPressed: {
+                    Keys.onPressed: (event)=> {
                         console.info("subRect1 pressed")
 
                         switch(event.key) {
@@ -180,7 +179,7 @@ Rectangle {
                     height: 50
                     color: "orange"
 
-                    Keys.onPressed: {
+                    Keys.onPressed: (event)=> {
                         console.info("subRect2 pressed")
 
                         switch(event.key) {
@@ -218,7 +217,7 @@ Rectangle {
             Rectangle {
                 id: topLeft
                 width: 50; height: 50
-                color: focus ? "green" : "black"
+                color: activeFocus ? "green" : "black"
                 MouseArea {
                     anchors.fill: parent
                     onClicked: parent.forceActiveFocus()
@@ -231,7 +230,7 @@ Rectangle {
             Rectangle {
                 id: topRight
                 width: 50; height: 50
-                color: focus ? "green" : "black"
+                color: activeFocus ? "green" : "black"
 
                 KeyNavigation.left: topLeft
                 KeyNavigation.down: bottomRight
@@ -240,7 +239,7 @@ Rectangle {
             Rectangle {
                 id: bottomLeft
                 width: 50; height: 50
-                color: focus ? "green" : "black"
+                color: activeFocus ? "green" : "black"
 
                 KeyNavigation.right: bottomRight
                 KeyNavigation.up: topLeft
@@ -249,7 +248,7 @@ Rectangle {
             Rectangle {
                 id: bottomRight
                 width: 50; height: 50
-                color: focus ? "green" : "black"
+                color: activeFocus ? "green" : "black"
 
                 KeyNavigation.left: bottomLeft
                 KeyNavigation.up: topRight

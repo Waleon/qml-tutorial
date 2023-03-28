@@ -1,14 +1,13 @@
 ﻿/****************************************
-* @brief    QML中的5大布局
+* @brief    QML 中的 5 大布局
 * @blog     https://waleon.blog.csdn.net/article/details/129222151
 * @author   一去、二三里
 * @wechat   iwaleon
 * 微信公众号  高效程序员
 ****************************************/
 
-import QtQuick 2.11
-import QtQuick.Controls 2.4
-import QtQuick.Layouts 1.11
+import QtQuick
+import QtQuick.Layouts
 
 Rectangle {
     id: layoutPage

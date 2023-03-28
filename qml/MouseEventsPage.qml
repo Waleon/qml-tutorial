@@ -6,9 +6,8 @@
 * 微信公众号  高效程序员
 ****************************************/
 
-import QtQuick 2.11
-import QtQuick.Controls 2.4
-import QtQuick.Layouts 1.11
+import QtQuick
+import QtQuick.Layouts
 
 Rectangle {
     id: mouseEventsPage
@@ -46,25 +45,25 @@ Rectangle {
                 // 支持所有可能的按钮
                 acceptedButtons: Qt.AllButtons
                 // 鼠标单击
-                onClicked: {
-                    if (mouse.button === Qt.LeftButton) {
-                        console.info("left button clicked")
-                    } else if (mouse.button === Qt.RightButton) {
-                        console.info("right button clicked")
-                    } else if (mouse.button === Qt.MiddleButton) {
-                        console.info("middle button clicked")
-                    }  else {
-                        console.info("button clicked: %1".arg(mouse.button))
-                    }
-                }
+                onClicked: (mouse)=> {
+                               if (mouse.button === Qt.LeftButton) {
+                                   console.info("left button clicked")
+                               } else if (mouse.button === Qt.RightButton) {
+                                   console.info("right button clicked")
+                               } else if (mouse.button === Qt.MiddleButton) {
+                                   console.info("middle button clicked")
+                               }  else {
+                                   console.info("button clicked: %1".arg(mouse.button))
+                               }
+                           }
                 // 鼠标双击
-                onDoubleClicked: {
-                    if (mouse.button === Qt.LeftButton) {
-                        console.info("area double clicked")
-                    }
-                }
+                onDoubleClicked: (mouse)=> {
+                                     if (mouse.button === Qt.LeftButton) {
+                                         console.info("area double clicked")
+                                     }
+                                 }
                 // 鼠标滚轮
-                onWheel: {
+                onWheel: (wheel)=> {
                     console.info("wheel button clicked, angleDelta: %1, x: %2, y: %3".arg(wheel.angleDelta).arg(wheel.x).arg(wheel.y))
                 }
             }
@@ -85,7 +84,9 @@ Rectangle {
                 // 鼠标离开
                 onExited: console.info("mouse exited the area")
                 // 鼠标位置改变
-                onPositionChanged: console.info("mouse position changed, x: %1, y: %2".arg(mouse.x).arg(mouse.y))
+                onPositionChanged: (mouse)=> {
+                    console.info("mouse position changed, x: %1, y: %2".arg(mouse.x).arg(mouse.y))
+                }
             }
         }
 
@@ -108,7 +109,7 @@ Rectangle {
                 MouseArea {
                     anchors.fill: parent
                     propagateComposedEvents: true
-                    onClicked: {
+                    onClicked: (mouse)=> {
                         onClicked: console.info("area2 clicked")
                         mouse.accepted = false
                     }

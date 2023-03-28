@@ -10,5 +10,7 @@
         <file>qml/LayoutPage.qml</file>
         <file>qml/ZOrderPage.qml</file>
         <file>qml/InlineCompontentPage.qml</file>
+        <file>qml/RectanglePage.qml</file>
+        <file>qml/HelloPage.qml</file>
     </qresource>
 </RCC>

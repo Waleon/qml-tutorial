@@ -6,9 +6,9 @@
 * 微信公众号  高效程序员
 ****************************************/
 
-import QtQuick 2.11
-import QtQuick.Controls 2.15
-import QtQuick.Layouts 1.15
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
 
 Rectangle {
     id: timerPage

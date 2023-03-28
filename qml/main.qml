@@ -6,10 +6,9 @@
 * 微信公众号  高效程序员
 ****************************************/
 
-import QtQuick 2.11
-import QtQuick.Window 2.11
-import QtQuick.Layouts 1.11
-import QtQuick.Controls 2.4
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls
 
 ApplicationWindow  {
     id: rootWindow
@@ -28,6 +27,8 @@ ApplicationWindow  {
             currentIndex: -1
 
             model: ListModel {
+                ListElement { title: "Hello QML"; source: "qrc:/qml/qml/HelloPage.qml" }
+                ListElement { title: "Rectangle"; source: "qrc:/qml/qml/RectanglePage.qml" }
                 ListElement { title: "Layout"; source: "qrc:/qml/qml/LayoutPage.qml" }
                 ListElement { title: "Color"; source: "qrc:/qml/qml/ColorPage.qml" }
                 ListElement { title: "Mouse Events"; source: "qrc:/qml/qml/MouseEventsPage.qml" }

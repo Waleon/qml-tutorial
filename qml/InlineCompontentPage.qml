@@ -1,5 +1,13 @@
-﻿import QtQuick 2.15
-import QtQuick.Layouts 1.15
+﻿/****************************************
+* @brief    QML 可重用组件
+* @blog     https://waleon.blog.csdn.net/article/details/129456882
+* @author   一去、二三里
+* @wechat   iwaleon
+* 微信公众号  高效程序员
+****************************************/
+
+import QtQuick
+import QtQuick.Layouts
 
 Rectangle {
     id: inlineCompontentPage
