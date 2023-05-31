@@ -1,4 +1,4 @@
-<RCC>
+﻿<RCC>
     <qresource prefix="/qml">
         <file>qml/main.qml</file>
         <file>qml/ColorPage.qml</file>
@@ -12,5 +12,9 @@
         <file>qml/InlineCompontentPage.qml</file>
         <file>qml/RectanglePage.qml</file>
         <file>qml/HelloPage.qml</file>
+        <file>qml/TextPage.qml</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>images/logo.jpg</file>
     </qresource>
 </RCC>

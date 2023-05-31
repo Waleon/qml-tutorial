@@ -29,6 +29,7 @@ ApplicationWindow  {
             model: ListModel {
                 ListElement { title: "Hello QML"; source: "qrc:/qml/qml/HelloPage.qml" }
                 ListElement { title: "Rectangle"; source: "qrc:/qml/qml/RectanglePage.qml" }
+                ListElement { title: "Text"; source: "qrc:/qml/qml/TextPage.qml" }
                 ListElement { title: "Layout"; source: "qrc:/qml/qml/LayoutPage.qml" }
                 ListElement { title: "Color"; source: "qrc:/qml/qml/ColorPage.qml" }
                 ListElement { title: "Mouse Events"; source: "qrc:/qml/qml/MouseEventsPage.qml" }
