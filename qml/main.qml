@@ -27,17 +27,18 @@ ApplicationWindow  {
             currentIndex: -1
 
             model: ListModel {
-                ListElement { title: "Hello QML"; source: "qrc:/qml/qml/HelloPage.qml" }
-                ListElement { title: "Rectangle"; source: "qrc:/qml/qml/RectanglePage.qml" }
-                ListElement { title: "Text"; source: "qrc:/qml/qml/TextPage.qml" }
-                ListElement { title: "Layout"; source: "qrc:/qml/qml/LayoutPage.qml" }
-                ListElement { title: "Color"; source: "qrc:/qml/qml/ColorPage.qml" }
-                ListElement { title: "Mouse Events"; source: "qrc:/qml/qml/MouseEventsPage.qml" }
-                ListElement { title: "Key Events"; source: "qrc:/qml/qml/KeyEventsPage.qml" }
-                ListElement { title: "Timer"; source: "qrc:/qml/qml/TimerPage.qml" }
-                ListElement { title: "Z-Order"; source: "qrc:/qml/qml/ZOrderPage.qml" }
-                ListElement { title: "Compontent"; source: "qrc:/qml/qml/CompontentPage.qml" }
-                ListElement { title: "Inline Compontent"; source: "qrc:/qml/qml/InlineCompontentPage.qml" }
+                ListElement { title: "Hello QML"; source: "qrc:/qml/HelloPage.qml" }
+                ListElement { title: "Rectangle"; source: "qrc:/qml/RectanglePage.qml" }
+                ListElement { title: "Text"; source: "qrc:/qml/TextPage.qml" }
+                ListElement { title: "Image"; source: "qrc:/qml/ImagePage.qml" }
+                ListElement { title: "Layout"; source: "qrc:/qml/LayoutPage.qml" }
+                ListElement { title: "Color"; source: "qrc:/qml/ColorPage.qml" }
+                ListElement { title: "Mouse Events"; source: "qrc:/qml/MouseEventsPage.qml" }
+                ListElement { title: "Key Events"; source: "qrc:/qml/KeyEventsPage.qml" }
+                ListElement { title: "Timer"; source: "qrc:/qml/TimerPage.qml" }
+                ListElement { title: "Z-Order"; source: "qrc:/qml/ZOrderPage.qml" }
+                ListElement { title: "Compontent"; source: "qrc:/qml/CompontentPage.qml" }
+                ListElement { title: "Inline Compontent"; source: "qrc:/qml/InlineCompontentPage.qml" }
             }
 
             delegate: ItemDelegate {

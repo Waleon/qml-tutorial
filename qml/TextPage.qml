@@ -1,4 +1,12 @@
-﻿import QtQuick
+﻿/****************************************
+* @brief    QML Text 元素
+* @blog     https://waleon.blog.csdn.net/article/details/130977326
+* @author   一去、二三里
+* @wechat   iwaleon
+* 微信公众号  高效程序员
+****************************************/
+
+import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 
@@ -32,25 +40,31 @@ Rectangle {
         }
 
         // 3. 文本格式
-        // 纯文本
-        Text {
-            textFormat: Text.PlainText
-            text: "<b>Hello</b> <i>World!</i>"
-        }
+        ColumnLayout {
+            spacing: 10
 
-        // 富文本
-        Text {
-            textFormat: Text.RichText
-            text: "<b>Hello</b> <i>World!</i>"
-        }
+            // 纯文本
+            Text {
+                textFormat: Text.PlainText
+                text: "<b>Hello</b> <i>World!</i>"
+            }
 
-        // 显示图片
-        Text {
-            text: "<img src=\"qrc:/images/images/logo.jpg\" width=\"200\" height=\"200\">"
+            // 富文本
+            Text {
+                textFormat: Text.RichText
+                text: "<b>Hello</b> <i>World!</i>"
+            }
+
+            // 显示图片
+            Text {
+                text: "<img src=\"qrc:/images/logo.jpg\">"
+            }
         }
 
         // 4. 长文本
         ColumnLayout {
+            spacing: 10
+
             // 文本截断
             Text {
                 id: longText

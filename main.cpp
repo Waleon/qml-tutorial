@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
-    engine.load(QUrl("qrc:/qml/qml/main.qml"));
+    engine.load(QUrl("qrc:/qml/main.qml"));
     if (engine.rootObjects().isEmpty())
         return -1;
 
