@@ -39,6 +39,10 @@ ApplicationWindow  {
                 ListElement { title: "Z-Order"; source: "qrc:/qml/ZOrderPage.qml" }
                 ListElement { title: "Compontent"; source: "qrc:/qml/CompontentPage.qml" }
                 ListElement { title: "Inline Compontent"; source: "qrc:/qml/InlineCompontentPage.qml" }
+                ListElement { title: "Inline Compontent"; source: "qrc:/qml/InlineCompontentPage.qml" }
+                ListElement { title: "Canvas"; source: "qrc:/qml/CanvasPage.qml" }
+                ListElement { title: "Canva(Image)"; source: "qrc:/qml/CanvasImagePage.qml" }
+                ListElement { title: "Canva(Text)"; source: "qrc:/qml/CanvasTextPage.qml" }
             }
 
             delegate: ItemDelegate {

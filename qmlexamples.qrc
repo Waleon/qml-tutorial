@@ -15,5 +15,8 @@
         <file>qml/TextPage.qml</file>
         <file>qml/ImagePage.qml</file>
         <file>images/logo.jpg</file>
+        <file>qml/CanvasImagePage.qml</file>
+        <file>qml/CanvasTextPage.qml</file>
+        <file>qml/CanvasPage.qml</file>
     </qresource>
 </RCC>
