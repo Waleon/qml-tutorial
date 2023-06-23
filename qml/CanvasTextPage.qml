@@ -1,3 +1,11 @@
+/****************************************
+* @brief    QML Canvas 元素（绘制文本）
+* @blog     https://waleon.blog.csdn.net/article/details/131344711
+* @author   一去、二三里
+* @wechat   iwaleon
+* 微信公众号  高效程序员
+****************************************/
+
 import QtQuick
 import QtQuick.Layouts
 
@@ -39,7 +47,7 @@ Rectangle {
 
         // 2. 设置字体
         Canvas {
-            width: 300; height: 400
+            width: 300; height: 500
 
             onPaint: {
                 var ctx = getContext("2d")
@@ -58,6 +66,33 @@ Rectangle {
 
         // 3. 设置样式
         Canvas {
+            width: 250; height: 200
+
+            onPaint: {
+                var ctx = getContext("2d")
+
+                canvasTextPage.drawBorder(ctx)
+
+                ctx.font = "36px sans-serif"
+
+                // 填充文本
+                ctx.fillStyle = "green"
+                ctx.fillText("Fill", 10, 50)
+
+                // 文本描边（无填充）
+                ctx.lineWidth = 1
+                ctx.strokeStyle = "red"
+                ctx.strokeText("Stroke", 10, 100)
+
+                // 填充文本并描边
+                ctx.text("Fill & Stroke", 10, 150)
+                ctx.fill()
+                ctx.stroke()
+            }
+        }
+
+        // 4.计算文本宽度（显示省略号）
+        Canvas {
             width: 200; height: 200
 
             onPaint: {
@@ -65,27 +100,15 @@ Rectangle {
 
                 canvasTextPage.drawBorder(ctx)
 
-                ctx.font = "24px sans-serif"
+                ctx.font = "16px sans-serif"
 
-                // 设置填充样式、线条样式
-                ctx.lineWidth = 1
-                ctx.strokeStyle = "red"
-                ctx.fillStyle = "green"
-
-                // 填充文本
-                ctx.fillText("Fill", 10, 50)
-
-                // 为文本描边（无填充）
-                ctx.strokeText("Stroke", 10, 100)
-
-                // 填充文本并描边
-                ctx.text("Stroke and Fill", 10, 150)
-                ctx.fill()
-                ctx.stroke()
+                // 预测文本宽度
+                var measure = ctx.measureText("Hello, Canvas!");
+                ctx.fillText("'Hello, Canvas!' width:" + measure.width, 10, 100);
             }
         }
 
-        // 4. 文本基线（垂直对齐）
+        // 5. 文本基线（垂直对齐）
         ColumnLayout {
             anchors.margins: 10
             spacing: 10
@@ -102,17 +125,13 @@ Rectangle {
 
                     canvasTextPage.drawBorder(ctx)
 
-                    ctx.font = "24px sans-serif"
+                    ctx.font = "16px sans-serif"
+
                     ctx.fillText("Hello, Canvas!", 0, 0)
-                    ctx.fillText("Hello, Canvas!", 0, 50)
-                    ctx.moveTo(0, 50)
-                    ctx.lineTo(200, 50)
-                    ctx.strokeStyle = "red"
-                    ctx.stroke()
                 }
             }
 
-            // 六线五格：指定一个文本和绘制点之间的关系
+            // 文本基线在文本的顶部
             Canvas {
                 width: 200; height: 100
 
@@ -121,10 +140,43 @@ Rectangle {
 
                     canvasTextPage.drawBorder(ctx)
 
-                    ctx.font = "24px sans-serif"
+                    ctx.font = "16px sans-serif"
                     // 设置基线在文本的顶部
-                    ctx.textBaseline = "top";
+                    ctx.textBaseline = "top"
                     ctx.fillText("Hello, Canvas!", 0, 0)
+                }
+            }
+
+            // 六线五格：指定一个文本和绘制点之间的关系
+            Canvas {
+                width: 450; height: 200
+
+                onPaint: {
+                    var ctx = getContext("2d")
+
+                    canvasTextPage.drawBorder(ctx)
+
+                    ctx.font = "16px sans-serif"
+
+                    // 基线（默认值：alphabetic）
+                    var textBaseline = ['top', 'hanging', 'middle', 'alphabetic', 'ideographic', 'bottom']
+
+                    // 画一条蓝线（以确定绘制点与基线的位置）
+                    ctx.strokeStyle = "blue"
+                    ctx.moveTo(0, 100)
+                    ctx.lineTo(450, 100)
+                    ctx.stroke()
+
+                    var x = 10
+
+                    for (var i = 0; i < textBaseline.length; i++) {
+                        ctx.textBaseline = textBaseline[i]
+                        ctx.fillText(textBaseline[i], x, 100)
+
+                        // 根据当前文本的宽度，计算下一个文本的 x 坐标
+                        var measure = ctx.measureText(textBaseline[i])
+                        x = x + measure.width + 10
+                    }
                 }
             }
 
@@ -133,7 +185,7 @@ Rectangle {
             }
         }
 
-        // 5. 水平对齐
+        // 8. 水平对齐
         Canvas {
             width: 200; height: 200
 
@@ -146,46 +198,18 @@ Rectangle {
                 var textAlign = ['left', 'right', 'center', 'start', 'end']
 
                 // 绘制一条“基准线”
-                ctx.strokeStyle = "red"
+                ctx.strokeStyle = "blue"
                 ctx.moveTo(100, 0)
                 ctx.lineTo(100, 200)
                 ctx.stroke()
 
-                // 设置文本色并绘制文本
-                ctx.font = "24px sans-serif"
-                ctx.fillStyle= "black"
+                // 绘制文本
+                ctx.font = "16px sans-serif"
 
                 for (var i = 0; i < textAlign.length; i++) {
                     ctx.textAlign = textAlign[i]
                     ctx.fillText(textAlign[i], 100, 40*(i+1))
                 }
-            }
-        }
-
-        // 6.计算文本宽度（显示省略号）
-        Canvas {
-            width: 200; height: 200
-
-            onPaint: {
-                var ctx = getContext("2d")
-
-                canvasTextPage.drawBorder(ctx)
-
-                ctx.font = "20px sans-serif"
-                var text = "This is a very very very very very long text."
-                var measure = ctx.measureText(text)
-
-                // 当文本宽度大于画布宽度时，显示省略号
-                if (measure.width > width) {
-                    var ellipses = "..."
-                    while (text.length > 0 && measure.width + ctx.measureText(ellipses).width > width) {
-                        // 剔除最后一个字符后进行提取
-                        text = text.slice(0, -1)
-                        measure = ctx.measureText(text)
-                    }
-                    text += ellipses
-                }
-                ctx.fillText(text, 0, 20)
             }
         }
 
