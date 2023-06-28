@@ -1,5 +1,5 @@
 /****************************************
-* @brief    QML Canvas 元素（绘制点线面）
+* @brief    QML Canvas 绘制点线面
 * @blog     https://waleon.blog.csdn.net/article/details/131254637
 * @author   一去、二三里
 * @wechat   iwaleon

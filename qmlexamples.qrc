@@ -1,5 +1,6 @@
 ﻿<RCC>
     <qresource prefix="/">
+        <file>images/logo.jpg</file>
         <file>qml/main.qml</file>
         <file>qml/ColorPage.qml</file>
         <file>qml/TimerPage.qml</file>
@@ -14,9 +15,10 @@
         <file>qml/HelloPage.qml</file>
         <file>qml/TextPage.qml</file>
         <file>qml/ImagePage.qml</file>
-        <file>images/logo.jpg</file>
+        <file>qml/CanvasPage.qml</file>
         <file>qml/CanvasImagePage.qml</file>
         <file>qml/CanvasTextPage.qml</file>
-        <file>qml/CanvasPage.qml</file>
+        <file>qml/CanvasGradientPage.qml</file>
+        <file>qml/CanvasImageDataPage.qml</file>
     </qresource>
 </RCC>

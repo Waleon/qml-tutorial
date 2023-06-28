@@ -1,5 +1,5 @@
 /****************************************
-* @brief    QML Canvas 元素（绘制图像）
+* @brief    QML Canvas 绘制图像
 * @blog     https://waleon.blog.csdn.net/article/details/131317973
 * @author   一去、二三里
 * @wechat   iwaleon
