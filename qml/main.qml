@@ -45,6 +45,7 @@ ApplicationWindow  {
                 ListElement { title: "Canva(Text)"; source: "qrc:/qml/CanvasTextPage.qml" }
                 ListElement { title: "Canva(Gradient)"; source: "qrc:/qml/CanvasGradientPage.qml" }
                 ListElement { title: "Canva(ImageData)"; source: "qrc:/qml/CanvasImageDataPage.qml" }
+                ListElement { title: "Canva(Clip)"; source: "qrc:/qml/CanvasClipPage.qml" }
             }
 
             delegate: ItemDelegate {

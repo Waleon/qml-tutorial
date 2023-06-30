@@ -10,7 +10,6 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 
-// Image（显示图像）
 Rectangle {
     id: imagePage
 

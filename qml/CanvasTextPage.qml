@@ -9,7 +9,6 @@
 import QtQuick
 import QtQuick.Layouts
 
-// Canvas - 绘制文本
 Rectangle {
     id: canvasTextPage
 

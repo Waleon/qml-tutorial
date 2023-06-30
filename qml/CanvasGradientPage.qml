@@ -9,7 +9,6 @@
 import QtQuick
 import QtQuick.Layouts
 
-// Canvas - 渐变（线性渐变、辐射渐变、锥形渐变）、阴影
 Rectangle {
     id: canvasGradientPage
 

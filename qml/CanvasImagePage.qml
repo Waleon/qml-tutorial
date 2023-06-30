@@ -9,7 +9,6 @@
 import QtQuick
 import QtQuick.Layouts
 
-// Canvas - 绘制图像
 Rectangle {
     id: canvasImagePage
 

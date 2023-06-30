@@ -9,7 +9,6 @@
 import QtQuick
 import QtQuick.Layouts
 
-// Canvas - 像素数据
 Rectangle {
     id: canvasImageDataPage
 

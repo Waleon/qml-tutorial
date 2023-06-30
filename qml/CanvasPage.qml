@@ -9,7 +9,6 @@
 import QtQuick
 import QtQuick.Layouts
 
-// Canvas - 绘制点线面
 Rectangle {
     id: canvasPage
 
