@@ -3,8 +3,8 @@
 
 int main(int argc, char *argv[])
 {
-    QGuiApplication::setOrganizationName("Waleon");
-    QGuiApplication::setApplicationName("QMLTutorial");
+    QGuiApplication::setOrganizationName("waleon");
+    QGuiApplication::setApplicationName("qmltutorial");
 
     QGuiApplication app(argc, argv);
 
