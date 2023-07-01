@@ -1,6 +1,6 @@
-﻿# QML Examples
+﻿# QML Tutorial
 
-[《细说 QML》](https://waleon.blog.csdn.net/category_9267924.html) 系列示例代码
+[《细说 QML》](https://waleon.blog.csdn.net/category_9267924.html) 系列教程示例源码
 
 # 更多精彩
 
