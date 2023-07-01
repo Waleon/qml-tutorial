@@ -20,5 +20,6 @@
         <file>qml/CanvasTextPage.qml</file>
         <file>qml/CanvasGradientPage.qml</file>
         <file>qml/CanvasImageDataPage.qml</file>
+        <file>qml/CanvasClipPage.qml</file>
     </qresource>
 </RCC>

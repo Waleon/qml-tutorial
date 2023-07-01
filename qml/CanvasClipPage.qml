@@ -55,7 +55,7 @@ Rectangle {
                 ctx.strokeStyle = "blue"
 
                 // 创建五角星裁剪区域
-                star(ctx, width/2, height/2, width/2, width/4, 0)
+                star(ctx, width/2, height/2, width/2, width/4)
                 ctx.stroke()
                 ctx.clip()
 
@@ -65,17 +65,16 @@ Rectangle {
             // (x, y)：圆心
             // R：外圆半径
             // r：内圆半径
-            // rot：顺时针旋转的角度
             // 将度换算成弧度：度数乘以 π/180（注意：360°=2π）
-            function star(cxt, x, y, R, r, rot) {
-                cxt.beginPath()
+            function star(ctx, x, y, R, r) {
+                ctx.beginPath()
                 for (var i = 0; i < 5; i++) {
-                    cxt.lineTo(x + Math.cos((18 + i * 72 - rot) / 180 * Math.PI) * R,
-                               y - Math.sin((18 + i * 72- rot) / 180 * Math.PI) * R)
-                    cxt.lineTo(x + Math.cos((54 + i * 72 - rot) / 180 * Math.PI) * r,
-                               y - Math.sin((54 + i * 72 - rot) / 180 * Math.PI) * r)
+                    ctx.lineTo(x + Math.cos((18 + i * 72) / 180 * Math.PI) * R,
+                               y - Math.sin((18 + i * 72) / 180 * Math.PI) * R)
+                    ctx.lineTo(x + Math.cos((54 + i * 72) / 180 * Math.PI) * r,
+                               y - Math.sin((54 + i * 72) / 180 * Math.PI) * r)
                 }
-                cxt.closePath()
+                ctx.closePath()
             }
 
             onImageLoaded: requestPaint()

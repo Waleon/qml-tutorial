@@ -1,5 +1,5 @@
 ﻿/****************************************
-* @brief    细说 QML
+* @brief    《细说 QML》教程
 * @blog     https://waleon.blog.csdn.net/category_9267924.html
 * @author   一去、二三里
 * @wechat   iwaleon
@@ -12,7 +12,7 @@ import QtQuick.Controls
 
 ApplicationWindow  {
     id: rootWindow
-    title: "QML Examples"
+    title: "QML Tutorial"
     width: 1000
     height: 800
     visible: true

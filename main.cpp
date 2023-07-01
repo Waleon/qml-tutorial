@@ -4,7 +4,7 @@
 int main(int argc, char *argv[])
 {
     QGuiApplication::setOrganizationName("Waleon");
-    QGuiApplication::setApplicationName("QMLExamples");
+    QGuiApplication::setApplicationName("QMLTutorial");
 
     QGuiApplication app(argc, argv);
 
