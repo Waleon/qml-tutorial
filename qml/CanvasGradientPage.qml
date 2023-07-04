@@ -27,11 +27,12 @@ Rectangle {
 
             onPaint: {
                 var ctx = getContext("2d")
-                // 沿起点（x0，y0）和终点（x1，y1）之间的线过渡颜色
+                // 从左向右渐变
                 var gradient = ctx.createLinearGradient(0, 0, width, 0)
-                gradient.addColorStop(0.0, "yellow")
-                gradient.addColorStop(1.0, "green")
+                gradient.addColorStop(0.0, "yellow")  // 最左侧，黄色
+                gradient.addColorStop(1.0, "green")   // 最右侧，绿色
                 ctx.fillStyle = gradient
+                ctx.beginPath()
                 ctx.fillRect(0, 0, width, height)
             }
         }
@@ -42,15 +43,13 @@ Rectangle {
 
             onPaint: {
                 var ctx = getContext("2d")
-                // 沿起始圆（x0，y0）和半径 r0 以及终止圆的原点（x1，y1）和半径 r1 给出的圆锥进行绘制
-                var gradient = ctx.createRadialGradient(100, 100, 20, 100, 100, 80)
-                gradient.addColorStop(0.0, "red")
-                gradient.addColorStop(1.0, "white")
-                // 用渐变对象填充圆形
+                // 从 (100, 100) 到 (100, 100) 的颜色辐射，起始半径为 10，结束半径为 100
+                var gradient = ctx.createRadialGradient(100, 100, 10, 100, 100, 100)
+                gradient.addColorStop(0.0, "green")  // 起始圆，绿色
+                gradient.addColorStop(1.0, "white")  // 结束圆，白色
                 ctx.fillStyle = gradient
                 ctx.beginPath()
-                ctx.arc(100, 100, 80, 0, 2 * Math.PI)
-                ctx.fill()
+                ctx.fillRect(0, 0, width, height)
             }
         }
 
@@ -60,12 +59,13 @@ Rectangle {
 
             onPaint: {
                 var ctx = getContext("2d")
-                // 围绕中心点（x，y）沿逆时针方向插入颜色，起始角度以弧度为单位
+                // 绕着中心点（100，100）从 0 弧度处开始沿逆时针方向旋转
                 var gradient = ctx.createConicalGradient(100, 100, 0)
-                gradient.addColorStop(0.0, "yellow")  // 从 0 度开始，黄色
+                gradient.addColorStop(0.0, "yellow")  // 在 0 度处，黄色
                 gradient.addColorStop(0.5, "green")   // 在 180 度处，绿色
-                gradient.addColorStop(1.0, "white")  // 在 180 度处，白色
+                gradient.addColorStop(1.0, "white")  // 在 360 度处，白色
                 ctx.fillStyle = gradient
+                ctx.beginPath()
                 ctx.fillRect(0, 0, width, height)
             }
         }
@@ -79,6 +79,7 @@ Rectangle {
                 ctx.fillStyle = "green"
                 ctx.shadowColor = "black"
                 ctx.shadowBlur = 10
+                ctx.beginPath()
                 ctx.fillRect(20, 20, 160, 160)
             }
 

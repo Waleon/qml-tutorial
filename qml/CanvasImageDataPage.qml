@@ -8,18 +8,10 @@
 
 import QtQuick
 import QtQuick.Layouts
+import "qrc:/js/utils.js" as Utils
 
 Rectangle {
     id: canvasImageDataPage
-
-    // 绘制边框，更容易看出效果
-    function drawBorder(ctx) {
-        ctx.save()
-        ctx.strokeStyle = "lightgray"
-        ctx.beginPath()
-        ctx.strokeRect(0, 0, ctx.canvas.width, ctx.canvas.height)
-        ctx.restore()
-    }
 
     RowLayout {
         anchors.fill: parent
@@ -37,7 +29,7 @@ Rectangle {
             onPaint: {
                 var ctx = getContext("2d")
 
-                canvasImageDataPage.drawBorder(ctx)
+                Utils.drawBorder(ctx)
 
                 // 创建一个 1 x 1 大小的透明的像素数据
                 var imageData = ctx.createImageData(1, 1)
@@ -132,7 +124,7 @@ Rectangle {
             onPaint: {
                 var ctx = getContext("2d")
 
-                canvasImageDataPage.drawBorder(ctx)
+                Utils.drawBorder(ctx)
 
                 // 原图和处理后的图像做对比
                 var imageData = ctx.createImageData(img)
@@ -155,7 +147,7 @@ Rectangle {
             onPaint: {
                 var ctx = getContext("2d")
 
-                canvasImageDataPage.drawBorder(ctx)
+                Utils.drawBorder(ctx)
 
                 ctx.fillStyle = "green"
                 ctx.beginPath()

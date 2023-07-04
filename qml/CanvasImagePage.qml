@@ -8,18 +8,10 @@
 
 import QtQuick
 import QtQuick.Layouts
+import "qrc:/js/utils.js" as Utils
 
 Rectangle {
     id: canvasImagePage
-
-    // 绘制边框，更容易看出效果
-    function drawBorder(ctx) {
-        ctx.save()
-        ctx.strokeStyle = "lightgray"
-        ctx.beginPath()
-        ctx.strokeRect(0, 0, ctx.canvas.width, ctx.canvas.height)
-        ctx.restore()
-    }
 
     RowLayout {
         anchors.fill: parent
@@ -39,7 +31,7 @@ Rectangle {
             onPaint: {
                 var ctx = getContext("2d")
 
-                canvasImagePage.drawBorder(ctx)
+                Utils.drawBorder(ctx)
 
                 // 绘制图片
                 ctx.drawImage(img, 100, 100)
@@ -61,7 +53,7 @@ Rectangle {
             onPaint: {
                 var ctx = getContext("2d")
 
-                canvasImagePage.drawBorder(ctx)
+                Utils.drawBorder(ctx)
 
                 // 绘制图片（起点坐标、绘制区域）
                 ctx.drawImage(img, 50, 50, 80, 120)
@@ -81,7 +73,7 @@ Rectangle {
             onPaint: {
                 var ctx = getContext("2d")
 
-                canvasImagePage.drawBorder(ctx)
+                Utils.drawBorder(ctx)
 
                 // 绘制图片（图像截取区域、画布绘制区域）
                ctx.drawImage(img, 20, 20, 80, 80, 50, 50, 80, 120)
@@ -104,7 +96,7 @@ Rectangle {
             onPaint: {
                 var ctx = getContext("2d")
 
-                canvasImagePage.drawBorder(ctx)
+                Utils.drawBorder(ctx)
 
                 // 绘制图片
                 ctx.drawImage(image, 100, 100)

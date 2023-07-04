@@ -8,18 +8,10 @@
 
 import QtQuick
 import QtQuick.Layouts
+import "qrc:/js/utils.js" as Utils
 
 Rectangle {
     id: canvasPage
-
-    // 绘制边框，更容易看出效果
-    function drawBorder(ctx) {
-        ctx.save()
-        ctx.strokeStyle = "lightgray"
-        ctx.beginPath()
-        ctx.strokeRect(0, 0, ctx.canvas.width, ctx.canvas.height)
-        ctx.restore()
-    }
 
     RowLayout {
         anchors.fill: parent
@@ -39,7 +31,7 @@ Rectangle {
                 // 使用 Context2D 对象来绘图
                 var ctx = getContext("2d");
 
-                canvasPage.drawBorder(ctx)
+                Utils.drawBorder(ctx)
 
                 // 设置填充色为红色
                 ctx.fillStyle = "red"
@@ -60,7 +52,7 @@ Rectangle {
             onPaint: {
                 var ctx = getContext("2d")
 
-                canvasPage.drawBorder(ctx)
+                Utils.drawBorder(ctx)
 
                 // 设置线条的宽度为 2，颜色为绿色
                 ctx.lineWidth = 2
@@ -83,7 +75,7 @@ Rectangle {
             onPaint: {
                 var ctx = getContext("2d")
 
-                canvasPage.drawBorder(ctx)
+                Utils.drawBorder(ctx)
 
                 // 设置线条的宽度为 2，颜色为蓝色
                 ctx.lineWidth = 2
@@ -140,7 +132,7 @@ Rectangle {
             onPaint: {
                 var ctx = getContext("2d")
 
-                canvasPage.drawBorder(ctx)
+                Utils.drawBorder(ctx)
 
                 drawSolidRect(ctx)
                 drawHollowRect(ctx)
@@ -155,7 +147,7 @@ Rectangle {
             onPaint: {
                 var ctx = getContext("2d")
 
-                canvasPage.drawBorder(ctx)
+                Utils.drawBorder(ctx)
 
                 // 绘制实心椭圆
                 ctx.fillStyle = "orange"
@@ -173,7 +165,7 @@ Rectangle {
             onPaint: {
                 var ctx = getContext("2d")
 
-                canvasPage.drawBorder(ctx)
+                Utils.drawBorder(ctx)
 
                 // 绘制实心圆
                 ctx.fillStyle = "orange"

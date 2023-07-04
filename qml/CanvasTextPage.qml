@@ -8,18 +8,10 @@
 
 import QtQuick
 import QtQuick.Layouts
+import "qrc:/js/utils.js" as Utils
 
 Rectangle {
     id: canvasTextPage
-
-    // 绘制边框，更容易看出效果
-    function drawBorder(ctx) {
-        ctx.save()
-        ctx.strokeStyle = "lightgray"
-        ctx.beginPath()
-        ctx.strokeRect(0, 0, ctx.canvas.width, ctx.canvas.height)
-        ctx.restore()
-    }
 
     RowLayout {
         anchors.fill: parent
@@ -37,7 +29,7 @@ Rectangle {
             onPaint: {
                 var ctx = getContext("2d")
 
-                canvasTextPage.drawBorder(ctx)
+                Utils.drawBorder(ctx)
 
                 // 填充文本
                 ctx.fillText("Hello, Canvas!", 10, 100)
@@ -51,7 +43,7 @@ Rectangle {
             onPaint: {
                 var ctx = getContext("2d")
 
-                canvasTextPage.drawBorder(ctx)
+                Utils.drawBorder(ctx)
 
                 // 设置字体
                 var fontFamily = "px sans-serif"
@@ -70,7 +62,7 @@ Rectangle {
             onPaint: {
                 var ctx = getContext("2d")
 
-                canvasTextPage.drawBorder(ctx)
+                Utils.drawBorder(ctx)
 
                 ctx.font = "36px sans-serif"
 
@@ -97,7 +89,7 @@ Rectangle {
             onPaint: {
                 var ctx = getContext("2d")
 
-                canvasTextPage.drawBorder(ctx)
+                Utils.drawBorder(ctx)
 
                 ctx.font = "16px sans-serif"
 
@@ -122,7 +114,7 @@ Rectangle {
                 onPaint: {
                     var ctx = getContext("2d")
 
-                    canvasTextPage.drawBorder(ctx)
+                    Utils.drawBorder(ctx)
 
                     ctx.font = "16px sans-serif"
 
@@ -137,7 +129,7 @@ Rectangle {
                 onPaint: {
                     var ctx = getContext("2d")
 
-                    canvasTextPage.drawBorder(ctx)
+                    Utils.drawBorder(ctx)
 
                     ctx.font = "16px sans-serif"
                     // 设置基线在文本的顶部
@@ -153,7 +145,7 @@ Rectangle {
                 onPaint: {
                     var ctx = getContext("2d")
 
-                    canvasTextPage.drawBorder(ctx)
+                    Utils.drawBorder(ctx)
 
                     ctx.font = "16px sans-serif"
 
@@ -191,7 +183,7 @@ Rectangle {
             onPaint: {
                 var ctx = getContext("2d")
 
-                canvasTextPage.drawBorder(ctx)
+                Utils.drawBorder(ctx)
 
                 // 水平对齐方式（默认值：start）
                 var textAlign = ['left', 'right', 'center', 'start', 'end']

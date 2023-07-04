@@ -21,5 +21,7 @@
         <file>qml/CanvasGradientPage.qml</file>
         <file>qml/CanvasImageDataPage.qml</file>
         <file>qml/CanvasClipPage.qml</file>
+        <file>qml/CanvasSavePage.qml</file>
+        <file>js/utils.js</file>
     </qresource>
 </RCC>
