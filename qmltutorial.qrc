@@ -1,6 +1,7 @@
 ﻿<RCC>
     <qresource prefix="/">
         <file>images/logo.jpg</file>
+        <file>js/utils.js</file>
         <file>qml/main.qml</file>
         <file>qml/ColorPage.qml</file>
         <file>qml/TimerPage.qml</file>
@@ -22,6 +23,6 @@
         <file>qml/CanvasImageDataPage.qml</file>
         <file>qml/CanvasClipPage.qml</file>
         <file>qml/CanvasSavePage.qml</file>
-        <file>js/utils.js</file>
+        <file>qml/CanvasAnimationPage.qml</file>
     </qresource>
 </RCC>
