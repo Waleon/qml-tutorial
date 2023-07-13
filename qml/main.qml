@@ -48,6 +48,7 @@ ApplicationWindow  {
                 ListElement { title: "Canva(Clip)"; source: "qrc:/qml/CanvasClipPage.qml" }
                 ListElement { title: "Canva(Save)"; source: "qrc:/qml/CanvasSavePage.qml" }
                 ListElement { title: "Canva(Animation)"; source: "qrc:/qml/CanvasAnimationPage.qml" }
+                ListElement { title: "Canva(Transform)"; source: "qrc:/qml/CanvasTransformPage.qml" }
             }
 
             delegate: ItemDelegate {

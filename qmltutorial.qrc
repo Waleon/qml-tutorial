@@ -24,5 +24,6 @@
         <file>qml/CanvasClipPage.qml</file>
         <file>qml/CanvasSavePage.qml</file>
         <file>qml/CanvasAnimationPage.qml</file>
+        <file>qml/CanvasTransformPage.qml</file>
     </qresource>
 </RCC>
