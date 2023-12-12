@@ -25,5 +25,14 @@
         <file>qml/CanvasSavePage.qml</file>
         <file>qml/CanvasAnimationPage.qml</file>
         <file>qml/CanvasTransformPage.qml</file>
+        <file>qml/global/Constants.qml</file>
+        <file>qml/global/qmldir</file>
+        <file>qml/SingletonPage.qml</file>
+        <file>qml/SettingsPage.qml</file>
+        <file>qml/Storage.qml</file>
+        <file>qml/StoragePage.qml</file>
+        <file>js/database.js</file>
+        <file>qml/XMLHttpRequestPage.qml</file>
+        <file>js/httprequest.js</file>
     </qresource>
 </RCC>

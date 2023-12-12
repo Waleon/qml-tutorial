@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- 嵌入 Qt WebChannel 脚本，用于 QML 和 Web 之间建立通信 -->
+        <script type="text/javascript" src="qrc:///qtwebchannel/qwebchannel.js"></script>
+        <script type="text/javascript" src="qrc:///main.js"></script>
+    </head>
+    <body>
+        <div>
+            <text>Name:</text>
+            <text id="name"></text>
+        </div>
+        <div>
+            <text>Message:</text>
+            <text id="message"></text>
+        </div>
+        <div>
+            <button onclick="getName();">Get Name</button>
+            <button onclick="changeStyle();">Change Style</button>
+        </div>
+    </body>
+</html>

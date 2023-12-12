@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>一去丶二三里</title>
+    <script>
+        // 判断是否全屏
+        function isFullScreen() {
+            return document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement ? true : false;
+        }
+
+        // 实现全屏
+        function fullScreen() {
+            if (this.isFullScreen())
+                return;
+
+            var docElm = document.documentElement;
+
+            // 根据不同浏览器，使用不同的方法请求全屏显示
+            if (docElm.requestFullscreen) {  // 用于 Chrome、Firefox、Safari 等支持最新 Web 标准的浏览器
+                docElm.requestFullscreen();
+            } else if (docElm.mozRequestFullScreen) {    // 用于旧版 Firefox 浏览器
+                docElm.mozRequestFullScreen();
+            } else if (docElm.webkitRequestFullScreen) { // 用于基于 WebKit 引擎的浏览器（例如：Chrome、Safari）
+                docElm.webkitRequestFullScreen();
+            } else if (docElm.msRequestFullscreen) {     // IE/Edge 用于 Microsoft Edge、IE11 及更早版本的浏览器
+                docElm.msRequestFullscreen();
+            }
+        }
+
+        // 退出全屏
+        function exitFullScreen() {
+            if (!this.isFullScreen())
+                return;
+
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else if (document.webkitCancelFullScreen) {
+                document.webkitCancelFullScreen();
+            } else if (document.msExitFullscreen) {
+                document.msExitFullscreen();
+            }
+        }
+    </script>
+    <style>
+        div {
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50% , -50%);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button onclick="fullScreen()">Full Screen</button>
+        <button onclick="exitFullScreen()">Exit Full Screen</button>
+    </div>
+</body>
+</html>

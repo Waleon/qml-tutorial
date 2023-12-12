@@ -40,6 +40,7 @@ ApplicationWindow  {
                 ListElement { title: "Compontent"; source: "qrc:/qml/CompontentPage.qml" }
                 ListElement { title: "Inline Compontent"; source: "qrc:/qml/InlineCompontentPage.qml" }
                 ListElement { title: "Inline Compontent"; source: "qrc:/qml/InlineCompontentPage.qml" }
+                ListElement { title: "Singleton"; source: "qrc:/qml/SingletonPage.qml" }
                 ListElement { title: "Canvas"; source: "qrc:/qml/CanvasPage.qml" }
                 ListElement { title: "Canva(Image)"; source: "qrc:/qml/CanvasImagePage.qml" }
                 ListElement { title: "Canva(Text)"; source: "qrc:/qml/CanvasTextPage.qml" }
@@ -49,6 +50,9 @@ ApplicationWindow  {
                 ListElement { title: "Canva(Save)"; source: "qrc:/qml/CanvasSavePage.qml" }
                 ListElement { title: "Canva(Animation)"; source: "qrc:/qml/CanvasAnimationPage.qml" }
                 ListElement { title: "Canva(Transform)"; source: "qrc:/qml/CanvasTransformPage.qml" }
+                ListElement { title: "Settings"; source: "qrc:/qml/SettingsPage.qml" }
+                ListElement { title: "Storage"; source: "qrc:/qml/StoragePage.qml" }
+                ListElement { title: "XMLHttpReques"; source: "qrc:/qml/XMLHttpRequestPage.qml" }
             }
 
             delegate: ItemDelegate {
@@ -80,4 +84,12 @@ ApplicationWindow  {
             listView.currentIndex = 0
         }
     }
+
+//    function setApplicationIdentifiers() {
+//        Qt.application.organization = "waleon"
+//        Qt.application.domain = "waleon.blog.csdn.net"
+//        Qt.application.name = "qmltutorial"
+//    }
+
+//    Component.onCompleted: setApplicationIdentifiers()
 }
