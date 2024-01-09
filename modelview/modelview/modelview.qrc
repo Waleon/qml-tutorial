@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/main.qml</file>
+        <file>qml/ContactModel.qml</file>
+        <file>qml/IconDelegate.qml</file>
+        <file>assets/logo.jpg</file>
+        <file>assets/logo2.jpg</file>
+        <file>assets/logo3.jpg</file>
+        <file>qml/DetailDelegate.qml</file>
+        <file>qml/DetailView.qml</file>
+        <file>qml/IconView.qml</file>
+    </qresource>
+</RCC>
